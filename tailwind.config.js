@@ -8,6 +8,12 @@ export default {
       colors: {
         green: {
           'main': "#72FF91"
+        },
+        blue: {
+          'main': '#074CB2'
+        },
+        black: {
+          'text': '#1E1E1E'
         }
       }
     },
