@@ -17,7 +17,7 @@
         <li class="md:mx-4 md:my-0 my-6" v-for="link in Links" :key="link.name">
             <a  @click="scrollTo(link.pos1, link.pos2)" class="hover:cursor-pointer font-semibold hover:text-green-500">{{link.name}}</a>
         </li>
-        <Button>Get a Free Website</Button>
+        <Button @click="scrollTo(5000, 4300)">Get a Free Website</Button>
     </ul>
     </div>
     </div>

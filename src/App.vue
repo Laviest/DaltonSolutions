@@ -54,7 +54,7 @@
           }, (error) => {
               console.log(error.text);
           });
-      }
+      },
     },
 
     setup() {
@@ -66,55 +66,64 @@
         {imageName: 'launch.png', alt: 'Launch', title: 'We Launch', desc: 'We launch your website with enthusiasm and provide ongoing support to keep it running smoothly.'} 
       ]
 
-    const data = [
-        {
-            id: 1,
-            question: "What do you mean by free?",
-            answer: "Most website development companies charge thousands of dollars to build a website. We build websites for free and charge a small monthly licensing fee.",
-        },
-        {
-            id: 2,
-            question: "How much is the licensing fee?",
-            answer: "For content only websites the licensing fee is $99 per month. This includes hosting, revisions, maintenance, and technical support. If you have more complex needs we can certainly take care of you.",
-        },
-        {
-            id: 3,
-            question: "How soon can you build my website?",
-            answer: "We typically deliver websites within 1 week.",
-        },
-        {
-            id: 4,
-            question: "Can you include contact forms?",
-            answer: "Yes, each website can feature a contact form which we will integrate with your domain name.",
-        },
-        {
-            id: 5,
-            question: "Do you host the website?",
-            answer: "Yes, websites are hosted on our servers.",
-        },
-        {
-            id: 5,
-            question: "Can you build a custom web application?",
-            answer: "Yes, we can build a custom web application for you.",
-        },
-        {
-            id: 5,
-            question: "What if I don't like the website you build?",
-            answer: "We offer unlimited revisions. We will work with you until you are completely satisfied with your website.",
-        },
-        {
-            id: 5,
-            question: "What if I want to cancel?",
-            answer: "You can cancel at any time.",
-        },
-        {
-            id: 5,
-            question: "How am I billed?",
-            answer: "We'll set you up with a monthly subscription via our payment processor, Stripe.com.",
-        },
-    ]
+      const data = [
+          {
+              id: 1,
+              question: "What do you mean by free?",
+              answer: "Most website development companies charge thousands of dollars to build a website. We build websites for free and charge a small monthly licensing fee.",
+          },
+          {
+              id: 2,
+              question: "How much is the licensing fee?",
+              answer: "For content only websites the licensing fee is $99 per month. This includes hosting, revisions, maintenance, and technical support. If you have more complex needs we can certainly take care of you.",
+          },
+          {
+              id: 3,
+              question: "How soon can you build my website?",
+              answer: "We typically deliver websites within 1 week.",
+          },
+          {
+              id: 4,
+              question: "Can you include contact forms?",
+              answer: "Yes, each website can feature a contact form which we will integrate with your domain name.",
+          },
+          {
+              id: 5,
+              question: "Do you host the website?",
+              answer: "Yes, websites are hosted on our servers.",
+          },
+          {
+              id: 5,
+              question: "Can you build a custom web application?",
+              answer: "Yes, we can build a custom web application for you.",
+          },
+          {
+              id: 5,
+              question: "What if I don't like the website you build?",
+              answer: "We offer unlimited revisions. We will work with you until you are completely satisfied with your website.",
+          },
+          {
+              id: 5,
+              question: "What if I want to cancel?",
+              answer: "You can cancel at any time.",
+          },
+          {
+              id: 5,
+              question: "How am I billed?",
+              answer: "We'll set you up with a monthly subscription via our payment processor, Stripe.com.",
+          },
+      ]
 
-      return{Wes, data}
+      function scrollTo(pos1, pos2) {
+        console.log('1234')
+          if(window.innerWidth < 1020){
+              window.scrollTo({top: pos1, behavior: "smooth"});
+          } else {
+              window.scrollTo({top: pos2, behavior: "smooth"});
+          }
+      }
+
+      return{Wes, data, scrollTo}
     }
   };
 </script>
@@ -130,7 +139,7 @@
         <div class="pt-32 lg:pt-0 md:mt-0 px-6 lg:px-0 lg:pl-[1.5rem] xl:pl-0">
           <h1 class="text-white font-black 2xl:text-5.5xl lg:text-5xl md:w-[600px] lg:w-auto text-5xl lato">Start Getting More Clients With a <span class="text-green-main">Free Website</span></h1>
           <h3 class="mt-[1.25rem] xl:text-xl lg:text-lg text-base text-white 2xl:pr-32 w-[300px] md:w-[600px] lg:w-auto">Stop struggling with leads. We’ll build you a stunning website, for FREE, and you only pay $100/month to keep it going. Attract clients, boost sales, dominate online, all risk-free.</h3>
-          <button class="mt-[1.25rem] flex bg-green-main duration-300 text-[#1E1E1E] rounded lg:py-3 py-3 lg:px-10 px-6 xl:text-base text-sm font-bold">GET YOUR FREE WEBSITE NOW
+          <button @click="scrollTo(5000, 4300)" class="mt-[1.25rem] flex bg-green-main duration-300 text-[#1E1E1E] rounded lg:py-3 py-3 lg:px-10 px-6 xl:text-base text-sm font-bold">GET YOUR FREE WEBSITE NOW
             <img src="./assets/arrow.png" class="mt-auto mb-auto ml-2 w-5"/>
           </button>
         </div>
@@ -159,7 +168,7 @@
           <p class="lg:mt-6 sm:mt-2 xl:text-xl text-lg text-black-text">That's where we come in. We believe every small business deserves a powerful online presence, regardless of budget.</p>
           <p class="lg:mt-6 sm:mt-2 xl:text-xl text-lg text-black-text font-semibold">That's why we're offering a magical deal.</p>
           <p class="lg:mt-6 sm:mt-2 xl:text-xl text-lg text-black-text">A completely free website creation, with a low monthly fee to keep it sparkling clean. Think of it as a rent-to-own website.</p>
-          <button class="flex mt-6 bg-green-main duration-300 text-[#1E1E1E] rounded py-3 px-10 lg:text-md text-sm font-bold">GET YOUR FREE WEBSITE NOW
+          <button @click="scrollTo(5000, 4300)" class="flex mt-6 bg-green-main duration-300 text-[#1E1E1E] rounded py-3 px-10 lg:text-md text-sm font-bold">GET YOUR FREE WEBSITE NOW
             <img src="./assets/arrow.png" class="mt-auto mb-auto ml-2 w-5"/>
           </button>
         </div>
