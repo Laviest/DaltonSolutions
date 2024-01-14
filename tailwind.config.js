@@ -15,6 +15,9 @@ export default {
         black: {
           'text': '#1E1E1E'
         }
+      },
+      fontSize: {
+        '5.5xl': ['56px', '1.1']
       }
     },
   },
