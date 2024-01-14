@@ -3,7 +3,7 @@
 
     
     <div class="text-white py-4 md:flex justify-between items-center max-w-[1400px] ml-auto mr-auto">
-    <div class="flex items-center">
+    <div class="flex items-center px-6">
         <h1 class="text-xl font-semibold">Dalton Solutions</h1>
     </div>
 
