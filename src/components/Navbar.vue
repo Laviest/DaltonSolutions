@@ -1,4 +1,7 @@
 <template>
+    <div class="absolute w-full ml-auto mr-auto">
+
+    
     <div class="text-white py-4 md:flex justify-between items-center max-w-[1400px] ml-auto mr-auto">
     <div class="flex items-center">
         <h1 class="text-xl font-semibold">Dalton Solutions</h1>
@@ -14,8 +17,9 @@
         <li class="md:mx-4 md:my-0 my-6" v-for="link in Links">
             <a :href="link.link" class=" font-semibold hover:text-green-500">{{link.name}}</a>
         </li>
-        <Button>GET A FREE WEBSITE</Button>
+        <Button>Get a Free Website</Button>
     </ul>
+    </div>
     </div>
 </template>
 <script>

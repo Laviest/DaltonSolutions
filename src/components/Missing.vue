@@ -1,6 +1,7 @@
 <template>
-    <div>
+    <div class=" p-12">
         <img :src="imageUrl" :alt="alt">
+        <div class="rounded h-5 w-full bg-white"/>
         <h3>{{ title }}</h3>
         <p>{{ desc }}</p>
     </div>
@@ -17,7 +18,6 @@ const props = defineProps({
 })
 
 const imageUrl = new URL(`/src/assets/${imageName}.png`, import.meta.url).href
-
 
 // function getImageUrl() {
 //   // This path must be correct for your file
